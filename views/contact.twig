@@ -1,0 +1,55 @@
+{% extends 'layout.twig' %}
+{% block title %}Contact - paocorp.com{% endblock %}
+{% block content %}
+    <!-- PAGE : CONTACT -->
+    <section id="contact" class="page">
+        <div class="content">
+            {% if response is defined %}
+                <div role="alert" class="alert alert-success">
+                    <button aria-label="Close" data-dismiss="alert" class="close" type="button"><span aria-hidden="true">×</span></button>
+                    <strong>{{'contact.feedback.result'|trans}}</strong> {{'contact.feedback.thx'|trans}}
+                </div>
+            {% endif %}
+            <!-- row -->
+            <div class="row">
+                <!-- column 6/12 -->
+                <div class="col-md-6">
+                    <h2 class="section-title"><span><i class="fa fa-paper-plane"></i>{{'contact.form.title'|trans}}</span></h2>
+                    <!-- .contact-form -->
+                    <div class="contact-form">
+                        <form id="contact-form" action="{{ path('mail') }}" method="post">
+                            <p class="form-group">
+                                <label class="control-label" for="name">{{'contact.form.name'|trans}}</label>
+                                <input type="text" name="name" id="name" class="required form-control" />
+                            </p>
+                            <p class="form-group">
+                                <label class="control-label" for="email">{{'contact.form.email'|trans}}</label>
+                                <input type="email" name="email" id="email" class="required email form-control" />
+                            </p>
+                            <p class="form-group">
+                                <label class="control-label" for="message">{{'contact.form.message'|trans}}</label>
+                                <textarea name="message" id="message" class="required form-control"></textarea>
+                            </p>
+                            <p>
+                                <input type="submit" class="submit button primary" value="{{'contact.form.btn'|trans}}" />
+                            </p>
+                        </form>
+                    </div>
+                    <!-- .contact-form -->
+                </div>
+                <!-- column 6/12 -->
+                <div class="col-md-6">
+                    <h2 class="section-title"><span><i class="fa fa-map-marker"></i>{{'contact.form.location'|trans}}</span></h2>                                                   
+                    <!-- GOOGLE MAP -->
+                    <div class="map">
+                        <div data-latitude="48.8588589" data-longitude="2.3470599" data-zoom="4" id="map-canvas" class="map-canvas"></div>
+                    </div>
+                    <!-- GOOGLE MAP -->
+                </div>
+                <!-- column 6/12 -->
+            </div>    				
+            <!-- row -->      
+        </div>
+    </section>
+    <!-- PAGE : CONTACT -->
+{% endblock %}

@@ -1,0 +1,57 @@
+{# layout.twig #}
+<!doctype html>  
+<html lang="{{ app.request.locale }}">  
+    <head>
+        <title>{% block title %}Index - paocorp.com{% endblock %}</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="author" content="Paocorp" />
+		<!-- STYLES -->
+        <link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}/res/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}/res/css/fonts/font-awesome/css/font-awesome.min.css" />
+        <!-- FAV and TOUCH ICONS -->
+        <link rel="shortcut icon" href="{{ app.request.basepath }}/res/images/ico/favicon.ico" />
+		<link rel="alternate" hreflang="x-default" href="{{ url(app.request.get('_route'), {'_locale': 'en'}) }}"/>
+		<link rel="alternate" hreflang="fr" href="{{ url(app.request.get('_route'), {'_locale': 'fr'}) }}"/>
+	</head>
+	<body>
+		<!-- CONTAINER -->
+		<div class="container" id="container">
+			<div class="col-xs-offset-9 col-md-offset-11">
+				<a href="{{ url(app.request.get('_route'), {'_locale': 'en'}) }}" hreflang="en" style="margin-right:20px;"><img src="{{ app.request.basepath }}/res/images/ico/en.png" alt="fr" width="32px" height="32px"/></a>
+				<a href="{{ url(app.request.get('_route'), {'_locale': 'fr'}) }}" hreflang="fr"><img src="{{ app.request.basepath }}/res/images/ico/fr.png" alt="fr" width="32px" height="32px"/></a>
+			</div> 
+		    <!-- HEADER -->
+		    <header class="header">	
+		        <!-- NAV MENU -->
+				<nav>
+				    <ul class="vs-nav">
+				        <!-- InstanceBeginEditable name="Menu-Content" -->
+				        <li><a href="{{ url('homepage') }}">{{'layout.about'|trans}}</a></li>
+				        <!-- InstanceEndEditable -->
+				    </ul>
+				</nav>
+		        <!-- NAV MENU -->
+		    </header>
+		    <!-- HEADER -->
+		    <!-- WRAPPER -->
+		    <div class="wrapper">
+		        {% block content %}
+		        {% endblock %}
+		    </div>
+		    <!-- WRAPPER -->
+			<!-- FOOTER -->
+			<footer class="footer">
+			    <!-- BOTTOM NAV MENU -->
+				<!-- BOTTOM NAV MENU -->
+			</footer>
+			<!-- FOOTER -->
+		</div>
+		<!-- CONTAINER -->
+		<!-- SCRIPTS -->
+		<script src="{{ app.request.basepath }}/res/js/jquery-2.1.4.min.js"></script>
+		<script src="{{ app.request.basepath }}/res/js/bootstrap.min.js"></script>
+		{% block adds %}
+		{% endblock %}
+	</body>
+</html> 

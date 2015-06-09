@@ -1,0 +1,138 @@
+{% extends 'layout.twig' %}
+{% block title %}Index - {% endblock %}
+{% block content %}
+
+    <!-- PAGE : ABOUT -->
+    <section id="about" class="page">
+        <div class="content">
+            <!-- row -->
+            <div class="row">
+                <!-- column 8/12 -->
+                <div class="col-md-12">
+                    <h2 class="section-title"><span><i class="fa fa-user"></i>{{'index.about'|trans}}</span></h2>
+                    <!-- intro -->
+                    <div class="intro">
+                        <h2>
+                            {{'index.hello'|trans}}
+                            <span class="rotate-words">
+                                <span>HTML5</span>
+                                <span>CSS3</span>
+                                <span>PHP Symfony</span>
+                                <span>Javascript</span>
+                                <span>Jquery</span>
+                                <span>Node.js</span>
+                                <span>Java</span>
+								<span>Ruby</span>
+                                <span>C#</span>
+                            </span>
+                            {{'index.dev'|trans}}
+                        </h2>
+                    </div>
+                    <!-- intro -->
+                </div>
+                <!-- column 8/12 -->
+            </div>
+            <!-- row -->
+            <h2 class="section-title"><span><i class="fa fa-magic"></i>{{'index.services'|trans}}</span></h2>
+            <!-- SERVICES -->
+            <div class="row">
+                <div class="col-sm-6 col-md-6">
+                    <!-- service -->
+                    <div class="service color3">
+                        <i class="fa fa-code"></i>
+                        <h4>{{'index.webDev'|trans}}</h4>
+                        <p>{{'index.webDevDesc'|trans}}</p>
+                    </div>
+                    <!-- service -->
+                </div>
+                <div class="col-sm-6 col-md-6">
+                    <!-- service -->
+                    <div class="service color1">
+                        <i class="fa fa-html5"></i>
+                        <h4>{{'index.webDesign'|trans}}</h4>
+                        <p>{{'index.webDesignDesc'|trans}}</p>
+                    </div>
+                    <!-- service -->
+                </div>
+				<div class="col-sm-12 col-md-12">
+					<div class="designs">
+						<i class="fa fa-desktop"></i>
+						<i class="fa fa-tablet"></i>
+						<i class="fa fa-mobile"></i>
+						<h4>{{'index.designsDesc'|trans}}</h4>
+					</div>
+				</div>
+            </div>
+            <!-- SERVICES -->
+            <h2 class="section-title"><span><i class="fa fa-stack-exchange"></i>{{'index.process'|trans}}</span></h2>
+            <!-- PROCESS -->
+            <div class="row">
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <!-- process -->
+                    <div class="process">
+                        <div class="process-box">
+                            <i class="fa fa-lightbulb-o"></i>
+                            <h4>{{'index.idea'|trans}}</h4>
+                        </div>
+                    </div>
+                    <!-- process -->
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <!-- process -->
+                    <div class="process">
+                        <div class="process-box">
+                            <i class="fa fa-puzzle-piece"></i>
+                            <h4>{{'index.concept'|trans}}</h4>
+                        </div>
+                    </div>
+                    <!-- process -->
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <!-- process -->
+                    <div class="process">
+
+                        <div class="process-box">
+                            <i class="fa fa-paint-brush"></i>
+                            <h4>{{'index.design'|trans}}</h4>
+                        </div>
+                    </div>
+                    <!-- process -->
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <!-- process -->
+                    <div class="process">
+
+                        <div class="process-box">
+                            <i class="fa fa-code"></i>
+                            <h4>{{'index.code'|trans}}</h4>
+                        </div>
+                    </div>
+                    <!-- process -->
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <!-- process -->
+                    <div class="process">
+                        <div class="process-box">
+                            <i class="fa fa-bug"></i>
+                            <h4>{{'index.test'|trans}}</h4>
+                        </div>
+                    </div>
+                    <!-- process -->
+                </div>
+                <div class="col-xs-6 col-sm-4 col-md-2">
+                    <!-- process -->
+                    <div class="process">
+                        <div class="process-box">
+                            <i class="fa fa-rocket"></i>
+                            <h4>{{'index.launch'|trans}}</h4>
+                        </div>
+                    </div>
+                    <!-- process -->
+                </div>
+            </div>
+            <!-- PROCESS -->      
+        </div>
+    </section>
+    <!-- PAGE : ABOUT -->
+
+{% endblock %}

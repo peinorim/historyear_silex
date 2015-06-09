@@ -1,0 +1,70 @@
+{# layout.twig #}
+<!doctype html>  
+<html lang="{{ app.request.locale }}">  
+    <head>
+        <title>{% block title %}Index - historyear.com{% endblock %}</title>
+        <meta charset="utf-8" />
+        <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1" />
+        <meta name="author" content="Paocorp" />
+        <!-- STYLES -->
+        <link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}/res/css/bootstrap.min.css" />
+        <link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}/res/css/font-awesome.min.css" />
+        <link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}/res/css/flipclock.css" />
+        <link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}/res/css/style.css" />
+        <link rel="stylesheet" type="text/css" href="{{ app.request.basepath }}/res/css/sails.css" />
+        
+        <!-- FAV and TOUCH ICONS -->
+        <link rel="shortcut icon" href="{{ app.request.basepath }}/res/images/ico/favicon_sails.ico" />
+        <link rel="alternate" hreflang="x-default" href="{{ url(app.request.get('_route'), {'_locale': 'en'}) }}"/>
+        <link rel="alternate" hreflang="fr" href="{{ url(app.request.get('_route'), {'_locale': 'fr'}) }}"/>
+    </head>
+    <body>
+        <div class="header navbar navbar-fixed-top">
+            <a href="{{ path('homepage', {_locale: 'fr'}) }}" class="pull-right" style="padding-right: 50px;"><img src="{{ app.request.basepath }}/res/images/ico/fr.png" alt="fr" width="32px" height="32px"></a>
+            <a href="{{ path('homepage', {_locale: 'en'}) }}" class="pull-right" style="padding-right: 20px;"><img src="{{ app.request.basepath }}/res/images/ico/en.png" alt="fr" width="32px" height="32px"></a>
+            <h1 id="main-title" class="container">{{'layout.title'|trans}}</h1>
+            <h3 class="container">{{'layout.intro'|trans}}</h3>
+            <div class="row">
+                <div class="col-lg-5 col-md-4 col-sm-4"></div>
+                <div class="col-lg-2 col-md-4 col-sm-4">
+                    <div class="clock"></div>
+                    <div class="input-group col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                        <input id="year" type="number" class="form-control" placeholder="{{'layout.choice'|trans}}" min="0">
+                        <span class="input-group-btn">
+                            <button id="btn" type="button" class="btn btn-success">GO !</button>
+                        </span>
+                    </div>
+                </div>
+                <div class="col-lg-5 col-md-4 col-sm-4">
+                    <h4 class="pull-right" style="color: #b1eef7;padding-right: 20px;">{{'layout.made'|trans}}: <a style="color: #b1eef7;" href="http://paocorp.com" target="_blank">paocorp.com</a></h4>
+                </div>
+            </div>
+        </div>
+        {% block content %}
+        {% endblock %}
+
+        <!-- SCRIPTS -->
+        <!--[if IE]>
+            <script src="{{ app.request.basepath }}/res/js/jquery-1.11.3.min.js"></script>
+        <![endif]-->
+        <!--[if !IE]> -->
+            <script src="{{ app.request.basepath }}/res/js/jquery-2.1.4.min.js"></script>
+        <!-- <![endif]-->
+        <script src="{{ app.request.basepath }}/res/js/bootstrap.min.js"></script>
+        <script src="{{ app.request.basepath }}/res/js/flipclock.min.js"></script>
+        <script src="{{ app.request.basepath }}/res/js/Day.js"></script>
+        <script src="{{ app.request.basepath }}/res/js/Year.js"></script>
+        <script src="{{ app.request.basepath }}/res/js/parse.js"></script>
+        {% block adds %}
+        {% endblock %}
+        <script>
+            (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+            m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+            })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+            ga('create', 'UA-47119875-5', 'auto');
+            ga('send', 'pageview');
+        </script>
+    </body>
+</html> 
