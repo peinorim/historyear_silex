@@ -15,8 +15,8 @@
         
         <!-- FAV and TOUCH ICONS -->
         <link rel="shortcut icon" href="{{ app.request.basepath }}/res/images/ico/favicon_sails.ico" />
-        <link rel="alternate" hreflang="x-default" href="{{ url(app.request.get('_route'), {'_locale': 'en'}) }}"/>
-        <link rel="alternate" hreflang="fr" href="{{ url(app.request.get('_route'), {'_locale': 'fr'}) }}"/>
+        <link rel="alternate" hreflang="x-default" href="{{ url(app.request.get('_route'), {'_locale': 'en','year':'now'|date('Y')}) }}"/>
+        <link rel="alternate" hreflang="fr" href="{{ url(app.request.get('_route'), {'_locale': 'fr','year':'now'|date('Y')}) }}"/>
     </head>
     <body>
         <div class="header navbar navbar-fixed-top">

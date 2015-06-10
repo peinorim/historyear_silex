@@ -4,8 +4,12 @@ $(window).on('resize load', function () {
     $('body').css({"padding-top": $(".navbar").height() + "px"});
 });
 $(document).ready(function () {
-    var d = new Date();
-    var year = d.getFullYear();
+    if ($("#cd-timeline").attr("data-year") !== "") {
+        var year = $("#cd-timeline").attr("data-year");
+    } else {
+        var d = new Date();
+        var year = d.getFullYear();
+    }
     clock = new FlipClock($('.clock'), year, {
         clockFace: 'Counter'
     });
