@@ -35,7 +35,21 @@ $app['translator'] = $app->share($app->extend('translator', function($translator
             return $translator;
         }));
 
-
+/* * *********************************************************** */
+/* * ************************ BDD ****************************** */
+/* * *********************************************************** */
+$app->register(new Silex\Provider\DoctrineServiceProvider(), array(
+    'dbs.options' => array (
+        'mysql' => array(
+            'driver'    => 'pdo_mysql',
+            'host'      => 'localhost',
+            'dbname'    => 'historyear',
+            'user'      => '',
+            'password'  => '',
+            'charset'   => 'utf8mb4',
+        )
+    ),
+));
 /* * ************************************************************* */
 /* * ********************** ROUTES ******************************* */
 /* * ************************************************************* */

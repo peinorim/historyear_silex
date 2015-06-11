@@ -28,12 +28,15 @@ $(document).ready(function () {
 function goYear() {
     var year = parseInt($("#year").val());
     if (!isNaN(year)) {
+
         countup = setInterval(function () {
             $("#cd-timeline").html("");
             if (clock.getTime().time === year) {
                 clock.stop();
                 clearInterval(countup);
                 parse(parseInt(year), $("html").attr("lang"));
+                $.get("year/" + year, function (data) {
+                });
             } else if (clock.getTime().time < year) {
                 clock.increment();
             } else if (clock.getTime().time > year) {
